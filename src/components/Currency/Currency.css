@@ -1,0 +1,35 @@
+.currency{
+    height: 200px;
+    width: 350px;
+    background-color: #0d2f52;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.currency_left{
+    width: 100px;
+    text-align: center;
+}
+
+.currency_left > div{
+    color: #77d563;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.currency_right{
+    color: #3e88b8;
+    padding-left: 50px;
+    font-size: 20px;
+}
+
+.priceName{
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+.currency_right_price{
+    line-height: 30px;
+}
