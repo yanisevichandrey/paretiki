@@ -56,7 +56,7 @@ class InputComponent extends Component {
             <div className="flex_between w250 m_for_btns">
                 {
                     this.state.btns.map((btn, index) => {
-                       return <div className="btn_price" onClick={() => this.handleBtns(index)} 
+                       return <div className={this.state.currBtn === index ? 'btn_price_active' : 'btn_price'} onClick={() => this.handleBtns(index)} 
                        key={btn.id}>{btn.nameBtn}</div>
                     })
                 }

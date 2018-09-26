@@ -16,7 +16,11 @@ class App extends Component {
   }
 
   componentDidMount(){
-    fetch('https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11')
+    this.getPrivatCurs();
+  }
+
+  getPrivatCurs = () => {
+    return fetch('https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11')
       .then(response => {
         return response.json();
       }).then( data => {
