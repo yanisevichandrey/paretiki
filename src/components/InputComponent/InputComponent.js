@@ -15,7 +15,7 @@ class InputComponent extends Component {
         currValue: 1
     }
 
-    handleBtns = (index) => {
+    handleBtns = (index) => () => {
         this.setState({currBtn: index})
     }
 
@@ -56,15 +56,15 @@ class InputComponent extends Component {
             <div className="flex_between w250 m_for_btns">
                 {
                     this.state.btns.map((btn, index) => {
-                       return <div className={this.state.currBtn === index ? 'btn_price_active' : 'btn_price'} onClick={() => this.handleBtns(index)} 
+                       return <div className={this.state.currBtn === index ? 'btn_price_active' : 'btn_price'} onClick={this.handleBtns(index)} 
                        key={btn.id}>{btn.nameBtn}</div>
                     })
                 }
             </div>
             <div className="total">
-                <span className="bold">{this.state.inputNumber}{this.props.nameCur}</span> will be <span className="bold"> 
-                {price} 
-                </span> in <span className="bold">{this.state.btns[this.state.currBtn].nameBtn}</span>
+                <span className="bold">{this.state.inputNumber}{this.props.nameCur}</span> 
+                will be <span className="bold"> {price} </span>
+                in <span className="bold">{this.state.btns[this.state.currBtn].nameBtn}</span>
             </div>
         </div>
     )

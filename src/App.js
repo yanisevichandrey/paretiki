@@ -41,7 +41,7 @@ class App extends Component {
     })
   }
 
-  handlerCurr = (index) => {
+  handlerCurr = (index) => () => {
     this.setState({ currCrypta: index });
   }
 
@@ -55,7 +55,7 @@ class App extends Component {
         priceUah={curr.priceUah}
         priceRub={curr.priceRub}
         img={curr.img}
-        clicked={() => this.handlerCurr(index)} />
+        clicked={this.handlerCurr(index)} />
     })
 
     return (
