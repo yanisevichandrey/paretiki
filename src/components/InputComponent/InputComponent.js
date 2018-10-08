@@ -62,7 +62,7 @@ class InputComponent extends Component {
                 }
             </div>
             <div className="total">
-                <span className="bold">{this.state.inputNumber}{this.props.nameCur}</span> 
+                <span className="bold">{this.state.inputNumber}{this.props.nameCur} </span> 
                 will be <span className="bold"> {price} </span>
                 in <span className="bold">{this.state.btns[this.state.currBtn].nameBtn}</span>
             </div>
